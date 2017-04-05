@@ -1,6 +1,7 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+﻿import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { WelcomePage } from '../pages/welcome/welcome';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { RequestPage } from '../pages/request/request';
 import { DetailPage } from '../pages/detail/detail';
@@ -13,7 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
+      MyApp,
+      WelcomePage,
     RequestPage,
 	ChatPage,
 	FriendsPage,
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+      MyApp,
+      WelcomePage,
     RequestPage,
     ChatPage,
 	FriendsPage,
