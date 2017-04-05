@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
+    "\\src\\app",
     "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -7,9 +7,32 @@
 <ion-content padding>
   <h2>Welcome to Organice!</h2>
   <p>
-    Click on the button below to enter this wonderful App.
+    Please log in with your Facebook account.
   </p>
-  <button ion-button color="secondary" outline id="testbutton" (click)='forward();'>Enter</button>
+  <div id="listdiv">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Username
+        </ion-label>
+        <ion-input type="text">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+  <br />
+
+  <p id="noposting">
+    We won't post anything without your permission.
+  </p>
+  <button ion-button color="default" id="testbutton" (click)='forward();' round>Login</button>
   
 </ion-content>
  
