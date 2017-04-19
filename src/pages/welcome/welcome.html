@@ -12,8 +12,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Organice!</h2>
+<ion-content padding hide-tabs>
+  <h2>Welcome to APP!</h2>
   <p>
     Please log in with your Facebook account.
   </p>
@@ -49,7 +49,6 @@
   <p>Password?</p>
   <input type="text" name="password" />
   <button primary block type="submit">Sign In</button>
-
   </form>-->
 
 
@@ -81,10 +80,8 @@
     <li ng-repeat="x in testarr">{{x}}</li>
   </ul>-->
   <!--<br />
-
   <p [ngInit]="overview=[{spieler:'Spieler 1', rasse:'Orc'},
      {spieler:'Spieler 2', rasse:'Mensch'}]">Spieler und Rassen:</p>
-
   <ul>
     <li ng-repeat="x in overview">
       Spieler: {{x.spieler}}, Rasse: {{x.rasse}}
@@ -93,6 +90,10 @@
 
   <br />
   <br />
+
+  <button ion-button icon-only menuToggle (click)="takeMeBack()">
+    <ion-icon name="arrow-back"></ion-icon>
+  </button>
 
   <!--<p>Figuren:</p>
   <ul ng-controller="loginctrl">

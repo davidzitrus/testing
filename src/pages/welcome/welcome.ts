@@ -18,12 +18,29 @@ export class WelcomePage {
       public data: string;
       user: string;
       pw: string;
-    rootPage: any = WelcomePage;
+      rootPage: any = WelcomePage;
+
+
+      tabBarElement: any;
+
     //@ViewChild('navRoot') navCtrl: NavController;
     FB_APP_ID: number = 407015042998857;
 
     constructor(public navCtrl: NavController, public http: Http) {
+        this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+      
+       
         Facebook.browserInit(this.FB_APP_ID, "v2.8");
+    }
+    ionViewWillEnter() {
+        this.tabBarElement.style.display = 'none';
+    }
+
+    ionViewWillLeave() {
+        this.tabBarElement.style.display = 'flex';
+    }
+    takeMeBack() {
+        this.navCtrl.parent.select(0); // navigiert zu view nummer x aus tabs.html
     }
 
  forward() {
