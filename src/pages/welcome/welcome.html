@@ -1,4 +1,12 @@
-﻿<ion-header>
+﻿<!DOCTYPE html>
+<html ng-app="ionic2app">
+<script src="https://code.angularjs.org/tools/system.js"></script>
+	<script src="https://code.angularjs.org/tools/typescript.js"></script>
+	<script src="https://code.angularjs.org/2.0.0-alpha.39/angular2.dev.js"></script><!--<script src="c_login.js"></script>-->
+
+
+
+<ion-header>
   <ion-navbar>
     <ion-title>Welcome</ion-title>
   </ion-navbar>
@@ -16,6 +24,7 @@
           Username
         </ion-label>
         <ion-input type="text">
+
         </ion-input>
       </ion-item>
       <ion-item>
@@ -32,7 +41,91 @@
   <p id="noposting">
     We won't post anything without your permission.
   </p>
+
+  <!--<ion-nav #navRoot [root]="rootPage"></ion-nav>
+  <form action="test2.php" method="get" />
+  <p>Username?</p>
+  <input type="text" name="username" />
+  <p>Password?</p>
+  <input type="text" name="password" />
+  <button primary block type="submit">Sign In</button>
+
+  </form>-->
+
+
   <button ion-button color="default" id="testbutton" (click)='forward();' round>Login</button>
-  
+  <div>
+    <p>BLZ: <input type="text" [(ngModel)]="blz" /></p>
+    <p>{{blz}}</p>
+    <p>Konto: <input type="text" [(ngModel)]="konto" /></p>
+    <p>{{konto}}</p>
+  </div>
+  <br />
+  <div>
+    <p>Vorname: {{vorname}}</p>
+    <p>Nachname: {{nachname}}</p>
+  </div>
+  <br />
+  <input type="text" [(ngModel)]="color" style="background-color:{{color}}" />
+  <br />
+  <p>Stück: <input type="number" [(ngModel)]="stuck" value="{{stuck}}" /></p>
+  <p>Preis: <input type="number" [(ngModel)]="preis" value="{{preis}}" /></p>
+  <p>Summe: {{ stuck * preis }}</p>
+  <br />
+  <p>Summe: {{stuck*preis}}</p>
+  <!--<p [ngInit]="person={rasse:'Zwerg',klasse:'Magier'}">Rasse: {{person.rasse}}</p>
+  <p>Klasse: {{person.klasse}}</p>-->
+  <br />
+  <!--<p [ngInit]="testarr=[1,3,5,7]">Ungerade Zahlen:</p>
+  <ul>
+    <li ng-repeat="x in testarr">{{x}}</li>
+  </ul>-->
+  <!--<br />
+
+  <p [ngInit]="overview=[{spieler:'Spieler 1', rasse:'Orc'},
+     {spieler:'Spieler 2', rasse:'Mensch'}]">Spieler und Rassen:</p>
+
+  <ul>
+    <li ng-repeat="x in overview">
+      Spieler: {{x.spieler}}, Rasse: {{x.rasse}}
+    </li>
+  </ul>-->
+
+  <br />
+  <br />
+
+  <!--<p>Figuren:</p>
+  <ul ng-controller="loginctrl">
+    <li ng-repeat="x in myData">
+      Name: {{x.Username}}, Land: {{x.Password }}
+    </li>
+  </ul>-->
+  <!--<ul ng-controller="loginctrl">
+    <li ng-repeat="x in myData">
+      {{ x.Name + ', ' + x.Country }}
+    </li>
+  </ul>-->
+  <form>
+    Book Name:-<input type="text" id="username"/>
+    Book Author:-<input type="text" id="password"/>
+    Book Price:-<input type="text" [(ngModel)]="bprice" name="bname" id="vorname" />
+    Book Language:-<input type="text" [(ngModel)]="blanguage" name="bname" id="nachname" />
+    <input type="button" value="submit" (click)="authenticate()" />
+    <input type="button" value="add" (click)="add()" />
+    <input type="button" value="FB LOGIN" (click)="doFbLogin()" />
+  </form>
+
+  <textarea id="test"> </textarea>
+
+  <textarea>username: {{data?.Username}}</textarea>
+  <div *ngFor="let item of data"><textarea>{{item.Username}}</textarea></div>
+
+  <br/>
+  <div><p>space</p></div>
+
 </ion-content>
- 
+
+
+
+
+</html>

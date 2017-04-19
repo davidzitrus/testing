@@ -8,6 +8,7 @@ import { DetailPage } from '../pages/detail/detail';
 import { ChatPage } from '../pages/chat/chat';
 import { FriendsPage } from '../pages/friends/friends';
 import { TabsPage } from '../pages/tabs/tabs';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   providers: [
-    StatusBar,
+      //NativeStorage,
+      //NavController,
+      StatusBar,
+      NativeStorage,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

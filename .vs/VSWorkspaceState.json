@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\pages"
+    "\\src\\pages",
+    "\\src\\pages\\welcome"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\pages\\welcome\\welcome.html",
   "PreviewInSolutionExplorer": false
 }

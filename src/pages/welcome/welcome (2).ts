@@ -31,11 +31,14 @@ export class WelcomePage {
       }
 
       authenticate() {
- 
+          //hier ohne methode?
+
           var user = String((<HTMLInputElement>document.getElementById('username')).value);
           var pw = String((<HTMLInputElement>document.getElementById('password')).value); 
 
           var creds = { username: user, password: pw };
+          //var creds = { username: 'user1', password: 'pw1' };
+        
 
           var headers = new Headers();
           headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -50,6 +53,14 @@ export class WelcomePage {
               err => this.logError(err),
               () => console.log('Completed')
               );
+          //hier json gedruckt
+          //console.log("data: " + JSON.stringify(this.data));
+
+          //funktioniert nicht
+         // let parsedjson = JSON.parse(this.data);
+
+          //console.log("data: " + parsedjson[0] );
+          //(<HTMLInputElement>document.getElementById('test')).value = this.data;
       }
     
 
@@ -58,6 +69,7 @@ export class WelcomePage {
       }
 
       add() {
+          //hier ohne methode?
 
           var user = String((<HTMLInputElement>document.getElementById('username')).value);
           var pw = String((<HTMLInputElement>document.getElementById('password')).value);
@@ -65,6 +77,8 @@ export class WelcomePage {
           var nn = String((<HTMLInputElement>document.getElementById('nachname')).value);
 
           var creds = { username: user, password: pw, vorname: vn, nachname: nn };
+          //var creds = { username: 'user1', password: 'pw1' };
+
 
           var headers = new Headers();
           headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -79,6 +93,15 @@ export class WelcomePage {
               err => this.logError(err),
               () => console.log('Completed')
               );
+          //hier json gedruckt
+          //console.log("data: " + JSON.stringify(this.data));
+
+          //funktioniert nicht
+          // let parsedjson = JSON.parse(this.data);
+
+          //console.log("data: " + parsedjson[0] );
+          //(<HTMLInputElement>document.getElementById('test')).value = this.data;
+         // this.authenticate();
       }
 
     doFbLogin() {
