@@ -35,6 +35,7 @@ export class DetailPage {
 
 
   doFbLogout() {
+	  
       var nav = this.navCtrl;
       Facebook.logout()
           .then(function (response) {
@@ -45,6 +46,7 @@ export class DetailPage {
               console.log(error);
           });
       this.forward();
+	
   }
 
 
